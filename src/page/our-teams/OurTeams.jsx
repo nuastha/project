@@ -16,7 +16,7 @@ const team = [
 
 export default function OurTeam() {
   return (
-    <section className="py-12 bg-gray-100 text-center">
+    <section className="py-18 bg-gray-100 text-center">
       <h2 className="text-3xl font-bold mb-8">Our Team</h2>
       <Cards team={team} />
     </section>
