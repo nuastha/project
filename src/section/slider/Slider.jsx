@@ -21,7 +21,7 @@ const sliderContent = [
 
 export default function App() {
   return (
-    <div className="relative w-full h-[calc(100vh-86px)]">
+    <div className="relative w-full lg:h-[calc(100vh-86px)]">
       <Swiper
         modules={[Navigation, Pagination]}
         navigation={{
@@ -37,7 +37,7 @@ export default function App() {
             <img
               src={content.imgUrl}
               alt=""
-              className="block size-full object-cover aspect-video"
+              className="block size-full object-contain aspect-video lg:object-cover"
             />
           </SwiperSlide>
         ))}
