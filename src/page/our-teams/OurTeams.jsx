@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Cards from "../../components/shared/Cards";
 import MyPic from "../../assets/my-pic.png";
-import axios from "axios";
+import api from "../../api/http";
 
 const team = [
   {
@@ -23,9 +23,7 @@ export default function OurTeam() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get(
-          `${import.meta.env.VITE_BASE_URL}/products`
-        );
+        const res = await api.get("/products");
         setProducts(res.data);
       } catch (err) {
         console.error("API error:", err);
