@@ -1,10 +1,11 @@
 import Cards from "../../components/shared/Cards";
+import MyPic from "../../assets/my-pic.png"
 
 const team = [
   {
     name: "Purna Bahadur Shrestha",
     role: "Frontend & Backend Developer",
-    image: "/vite.svg", // Replace with your image path
+    image: MyPic,
     bio: "Focused on building responsive, accessible, and modern web applications using React, Tailwind CSS, and RESTful APIs.",
     social: {
       linkedin: "https://www.linkedin.com/in/purna-s-a7a053288/",
