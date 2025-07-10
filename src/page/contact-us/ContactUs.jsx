@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import axios from "axios";
+import api from "../../api/http";
 
 export default function ContactUs() {
   const {
@@ -17,10 +17,7 @@ export default function ContactUs() {
     setIsSubmitting(true);
     try {
       setError(null);
-      const response = await axios.post(
-        `${import.meta.env.VITE_BASE_URL}`,
-        data
-      );
+      const response = await api.post("/contact", data);
       if (response.status === 201) {
         setSubmitted(true);
         reset();
