@@ -10,13 +10,28 @@ export default function ContactUs() {
     formState: { errors },
   } = useForm();
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
-    setSubmitted(true);
-    axios.post(`${import.meta.env.VITE_BASE_URL}`)
-    setTimeout(() => setSubmitted(false), 3000); // hide after 3s
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
+    try {
+      setError(null);
+      const response = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}`,
+        data
+      );
+      if (response.status === 201) {
+        setSubmitted(true);
+        reset();
+      }
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (err) {
+      setError("Failed to submit. Please try again.");
+      console.error(err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -25,8 +40,9 @@ export default function ContactUs() {
         <div className="md:w-1/2 w-full text-right space-y-4 text-balance leading-relaxed tracking-wide">
           <h4 className="text-3xl font-bold">Contact Us</h4>
           <p>
-            fill the form for get more info about the dream to reality for
-            business leads and website. thank you for your visiting.
+            Fill out the form to get more information about turning your dream
+            into reality — whether it's for business leads or a website. Thank
+            you for visiting!
           </p>
         </div>
         <form
@@ -104,9 +120,12 @@ export default function ContactUs() {
 
           <button
             type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            disabled={isSubmitting}
+            className={`bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 ${
+              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
-            Submit
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
 
           {submitted && (
@@ -114,6 +133,7 @@ export default function ContactUs() {
               ✅ Form submitted successfully!
             </p>
           )}
+          {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
         </form>
       </div>
     </section>
