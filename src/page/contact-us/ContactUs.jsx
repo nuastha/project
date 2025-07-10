@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import axios from "axios";
 
 export default function ContactUs() {
   const {
@@ -14,6 +15,7 @@ export default function ContactUs() {
     console.log(data);
     reset();
     setSubmitted(true);
+    axios.post(`${import.meta.env.VITE_BASE_URL}`)
     setTimeout(() => setSubmitted(false), 3000); // hide after 3s
   };
 
