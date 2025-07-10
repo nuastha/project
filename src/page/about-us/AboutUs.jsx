@@ -55,7 +55,7 @@ export default function AboutUs() {
         </div>
 
         <div className="w-full lg:w-1/2 flex justify-center items-center relative select-none">
-          <div className="absolute inset-0 w-1/2 h-full translate-x-3/5 lg:translate-x-44 rounded-full bg-white/40 shadow-[0_0_60px_30px_rgba(255,255,255,0.5)] backdrop-blur-md z-10 animate-pulse" />
+          <div className="absolute inset-0 w-1/2 h-full translate-x-3/5 lg:translate-x-44 rounded-full bg-white/40 shadow-[0_0_60px_30px_rgba(255,255,255,0.5)] backdrop-blur-md z-10 animate-pulse ease-in-out" />
           <img
             src={MyPic}
             alt="Purna Bahadur Shrestha"
