@@ -4,7 +4,7 @@ import MyPic from "../../assets/my-pic.png";
 
 export default function AboutUs() {
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gray-100 select-none">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-12 text-left flex gap-4 flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 space-y-4">
           <h2 className="text-3xl font-bold text-gray-800">About Me</h2>
