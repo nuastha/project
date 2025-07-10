@@ -48,14 +48,14 @@ export default function AboutUs() {
 
           <Link
             to="/contact-us"
-            className="inline-block mt-6 px-6 py-2 bg-blue-800 text-white rounded hover:bg-blue-700 transition"
+            className="inline-block mt-6 px-6 py-2.5 bg-blue-800 text-white rounded hover:bg-blue-600 transition"
           >
             Get in Touch
           </Link>
         </div>
 
         <div className="w-full lg:w-1/2 flex justify-center items-center relative select-none">
-          <div className="absolute inset-0 w-1/2 h-full translate-x-44 rounded-full bg-white/40 shadow-[0_0_60px_30px_rgba(255,255,255,0.5)] backdrop-blur-md z-10 animate-pulse" />
+          <div className="absolute inset-0 w-1/2 h-full translate-x-3/5 lg:translate-x-44 rounded-full bg-white/40 shadow-[0_0_60px_30px_rgba(255,255,255,0.5)] backdrop-blur-md z-10 animate-pulse" />
           <img
             src={MyPic}
             alt="Purna Bahadur Shrestha"
