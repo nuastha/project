@@ -27,7 +27,7 @@ export default function AboutUs() {
 
           <div className="flex gap-4 mt-8">
             <a
-              href="https://www.linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/purna-s-a7a053288"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -36,7 +36,7 @@ export default function AboutUs() {
               <BsLinkedin className="size-10 text-[#0A66C2]" />
             </a>
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/nuastha"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
