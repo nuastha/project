@@ -1,0 +1,23 @@
+import Cards from "../../components/shared/Cards";
+
+const team = [
+  {
+    name: "Purna Bahadur Shrestha",
+    role: "Frontend & Backend Developer",
+    image: "/vite.svg", // Replace with your image path
+    bio: "Focused on building responsive, accessible, and modern web applications using React, Tailwind CSS, and RESTful APIs.",
+    social: {
+      linkedin: "https://www.linkedin.com/in/purna-s-a7a053288/",
+      github: "https://github.com/nuastha",
+    },
+  },
+];
+
+export default function OurTeam() {
+  return (
+    <section className="py-12 bg-gray-100 text-center">
+      <h2 className="text-3xl font-bold mb-8">Our Team</h2>
+      <Cards team={team} />
+    </section>
+  );
+}
