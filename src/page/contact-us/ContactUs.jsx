@@ -34,7 +34,7 @@ export default function ContactUs() {
   return (
     <section className="bg-gray-100">
       <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 ">
-        <div className="md:w-1/2 w-full text-right space-y-4 text-balance leading-relaxed tracking-wide">
+        <div className="md:w-1/2 w-full lg:text-right text-left space-y-4 text-balance leading-relaxed tracking-wide">
           <h4 className="text-3xl font-bold">Contact Us</h4>
           <p>
             Fill out the form to get more information about turning your dream
