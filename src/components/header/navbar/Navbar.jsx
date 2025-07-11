@@ -2,9 +2,10 @@ import Navlink from "./NavLink";
 
 const links = [
   { route: "/", routeName: "home" },
-  { route: "/about-us", routeName: "about us" },
-  { route: "/our-teams", routeName: "our teams" },
-  { route: "/contact-us", routeName: "contact us" },
+  { route: "/products", routeName: "products" },
+  // { route: "/about-us", routeName: "about us" },
+  // { route: "/our-teams", routeName: "our teams" },
+  // { route: "/contact-us", routeName: "contact us" },
 ];
 export default function Navbar() {
   return (
